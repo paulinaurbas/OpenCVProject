@@ -64,5 +64,18 @@ void Britness(Image & image, int number)
 }
 void Contrast(Image & image)
 {
-
+	int alfa, beta;
+	image.output = Mat::zeros(image.input.size(), image.input.type());
+	std::cout << "*Enter the alpha value [1.0-3.0]:"; std::cin >> alfa;
+	std::cout << "*Enter the beta value [0-100]:"; std::cin >> beta;
+	for (int y = 0; y < image.input.rows; y++)
+	{
+		for (int x = 0; x < image.input.cols; x++)
+		{
+			for (int c =0; c< 3; c++)
+			{
+				image.output.at<Vec3b>(y, x)[c] = saturate_cast<uchar>(alfa*(image.input.at<Vec3b>(y, x)[c]) + beta);
+			}
+		}
+	}
 }

@@ -5,6 +5,12 @@
 #include <opencv2\opencv.hpp>
 #include "ImageProcess.h"
 #include "User.h"
+void Help()
+{
+	std::cout << "Pomoc" << std::endl;
+	std::cout << "Poprawny format wpisywanych danych to: -i nazwa pliku wejsciowego -numerfiltru" << std::endl;
+	std::cout << "1-filtr czarnobialy 2-sepia 3-wykrywanie krawedzi 4-jasnosc i contrast 5-wygladzanie" << std::endl;
+}
 void ShowPicture(const Image & input, const string Info, int number)
 {
 	namedWindow(Info, CV_WINDOW_AUTOSIZE);
