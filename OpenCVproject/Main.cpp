@@ -10,35 +10,36 @@ int main(int argc, char *argv[])
 {
 	try
 	{
-		for (int i = 0; i < argc; i++)
-		{
-			std::cout << argv[i] << std::endl;
-		}
-		Image image;
-		image.input = imread("tygrys.jpg", CV_LOAD_IMAGE_COLOR);
-		if (!image.input.data)
-		{
-			cout << "Could not open or find the image" << std::endl;
+		string input;
+		string output;
+		int nb = 0; 
+		//int number = CheckTerminal(argc, argv, input, nb, output);
+		//if (number == 0)
+			Image image;
+			image.input = imread("melon.jpg", CV_LOAD_IMAGE_COLOR);
+			if (!image.input.data)
+			{
+				cout << "Could not open or find the image" << std::endl;
+				return 0;
+			}
+			ShowPicture(image, "Color", 1);
+			BlackAndWhite(image);
+			imwrite("outputBW.jpg", image.output);
+			ShowPicture(image, "BlackAndWhite", 0);
+			Sepia(image);
+			imwrite("outputSepia.jpg", image.output);
+			ShowPicture(image, "Sepia", 0);
+			image.output = EdgeDetection(image);
+			imwrite("EdgeBW.jpg", image.output);
+			ShowPicture(image, "Edge Detection", 0);
+			Smooth(image);
+			ShowPicture(image, "Smooth", 0);
+			imwrite("smooth.jpg", image.output);
+			Britness(image, 50);
+			ShowPicture(image, "Brightness", 0);
+			imwrite("brithness.jpg", image.output);
+			//waitKey();
 			return 0;
-		}
-		ShowPicture(image, "Color", 1);
-		BlackAndWhite(image);
-		imwrite("outputBW.jpg", image.output);
-		ShowPicture(image, "BlackAndWhite", 0);
-		Sepia(image);
-		imwrite("outputSepia.jpg", image.output);
-		ShowPicture(image, "Sepia", 0);
-		image.output = EdgeDetection(image);
-		imwrite("EdgeBW.jpg", image.output);
-		ShowPicture(image, "Edge Detection", 0);
-		Smooth(image);
-		ShowPicture(image, "Smooth", 0);
-		imwrite("smooth.jpg", image.output);
-		Britness(image, 50);
-		ShowPicture(image, "Brightness", 0);
-		imwrite("brithness.jpg", image.output);
-		//waitKey();
-		return 0;
 	}
 	catch (...)
 	{

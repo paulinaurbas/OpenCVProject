@@ -11,6 +11,41 @@ void Help()
 	std::cout << "Poprawny format wpisywanych danych to: -i nazwa pliku wejsciowego -numerfiltru" << std::endl;
 	std::cout << "1-filtr czarnobialy 2-sepia 3-wykrywanie krawedzi 4-jasnosc i contrast 5-wygladzanie" << std::endl;
 }
+int CheckTerminal(int argc, char *argv[], string & inputname, int & number, string & outputname)
+{
+	int ok = 0; 
+	if(argc <= 7)
+	for (int i = 1; i < argc; i++)
+	{
+		if (string(argv[i]) == string("-h"))
+		{
+			return 1;
+		}
+		if (string(argv[i]) == string("-i"))
+		{
+			inputname = string(argv[i + 1]);
+			ok++;
+		}
+		if (string(argv[i]) == string("-o"))
+		{
+			outputname = string(argv[i + 1]);
+			ok++;
+		}
+		if (string(argv[i]) == string("-n"))
+		{
+			number = int(argv[i + 1]);
+			ok++;
+		}
+	}
+	if (ok == 3)
+	{
+		return 0;
+	}
+	else
+	{
+		return 1; 
+	}
+}
 void ShowPicture(const Image & input, const string Info, int number)
 {
 	namedWindow(Info, CV_WINDOW_AUTOSIZE);

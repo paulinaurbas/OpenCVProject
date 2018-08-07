@@ -24,7 +24,7 @@ void Help();
 @param int, char *, string
 @return int
 */
-int CheckTerminal(int argc, char *argv[], string & inputname);
+int CheckTerminal(int argc, char *argv[], string & inputname, int & number, string & outputname);
 /** Function checking number of filtr and coverting
 @date 10.07.2018
 @param char *, Image *
