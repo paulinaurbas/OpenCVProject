@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 				cout << "Could not open or find the image" << std::endl;
 				return 0;
 			}
+			std::cout << "paula" << std::endl;
 			ShowPicture(image, "Color", 1);
 			BlackAndWhite(image);
 			imwrite("outputBW.jpg", image.output);
