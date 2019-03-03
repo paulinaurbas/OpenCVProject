@@ -1,1 +1,6 @@
-﻿  OpenCVproject.vcxproj -> C:\Users\User\Documents\GitHub\OpenCVProject-\Debug\OpenCVproject.exe
+﻿  ImageProcess.cpp
+  Main.cpp
+  User.cpp
+  Generating Code...
+c:\users\user\documents\github\opencvproject-\opencvproject\imageprocess.cpp(34): warning C4715: 'MakeKernel': not all control paths return a value
+  OpenCVproject.vcxproj -> C:\Users\User\Documents\GitHub\OpenCVProject-\Debug\OpenCVproject.exe
