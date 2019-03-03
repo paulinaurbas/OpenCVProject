@@ -115,12 +115,10 @@
   <ItemGroup>
     <ClCompile Include="ImageProcess.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="TrackBar.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImageProcess.h" />
-    <ClInclude Include="TrackBar.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
