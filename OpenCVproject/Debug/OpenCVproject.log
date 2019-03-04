@@ -1,2 +1,1 @@
-﻿  Main.cpp
-LINK : fatal error LNK1209: program database 'C:\Users\User\Documents\GitHub\OpenCVProject-\Debug\OpenCVproject.pdb' differs from previous link; relink or rebuild
+﻿  OpenCVproject.vcxproj -> C:\Users\User\Documents\GitHub\OpenCVProject-\Debug\OpenCVproject.exe
