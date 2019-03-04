@@ -1,6 +1,2 @@
-﻿  ImageProcess.cpp
-  Main.cpp
-  User.cpp
-  Generating Code...
-c:\users\user\documents\github\opencvproject-\opencvproject\imageprocess.cpp(34): warning C4715: 'MakeKernel': not all control paths return a value
-  OpenCVproject.vcxproj -> C:\Users\User\Documents\GitHub\OpenCVProject-\Debug\OpenCVproject.exe
+﻿  Main.cpp
+LINK : fatal error LNK1209: program database 'C:\Users\User\Documents\GitHub\OpenCVProject-\Debug\OpenCVproject.pdb' differs from previous link; relink or rebuild

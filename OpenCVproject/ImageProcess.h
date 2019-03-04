@@ -8,9 +8,16 @@
 using namespace cv;
 class Image
 {
-public:
+private:
 	Mat input;
-	Mat output;
+    Mat output;
+public: 
+	Image();
+	~Image();
+	void SetMatInput(Mat inputMat);
+	void SetMatOutput(Mat outputMat);
+	Mat GetMatInput();
+	Mat GetMatOutput();
 };
 Mat MakeKernel();
 void BlackAndWhite(Image & image);

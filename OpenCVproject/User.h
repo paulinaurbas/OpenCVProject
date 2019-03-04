@@ -12,7 +12,7 @@ using namespace cv;
 @author Paulina Urbas
 @date 10.07.2018
 */
-void ShowPicture(const Image & input, const string Info, int number);
+void ShowPicture(Image & input, const string Info, int number);
 /** Function printing help
 @author Paulina Urbas
 @date 10.07.2018

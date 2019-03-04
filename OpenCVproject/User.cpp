@@ -46,15 +46,15 @@ int CheckTerminal(int argc, char *argv[], string & inputname, int & number, stri
 		return 1; 
 	}
 }
-void ShowPicture(const Image & input, const string Info, int number)
+void ShowPicture(Image & input, const string Info, int number)
 {
 	namedWindow(Info, CV_WINDOW_AUTOSIZE);
 	if (number == 0)
 	{
-		imshow(Info, input.output);
+		imshow(Info, input.GetMatOutput());
 	}
 	else
 	{
-		imshow(Info, input.input);
+		imshow(Info, input.GetMatInput());
 	}
 }
