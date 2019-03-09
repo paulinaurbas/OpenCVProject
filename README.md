@@ -3,7 +3,7 @@ Refresh my MiniPhotoshop project using OpenCV library.
 Function: 
 - turn into black and white
 - turn into sepia
-- change brithness
+- change brightness
 - edge detection 
 - smoothing
 
